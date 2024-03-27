@@ -1,0 +1,165 @@
+#outerwrapper {
+    background-color: #b3c7e6;
+    font-family: Verdana, Arial, sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 15% auto;
+}
+
+header>img {
+    float: left;
+    width: 15%;
+    height: 100%;
+    margin-right: 2%;
+    margin-top: 0;
+}
+
+h2 {
+    color: lightblue;
+}
+
+header {
+    background-color: #869dc7;
+    margin-top: 0%;
+    font-size: 50px;
+    opacity: 0.7;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+header>h1 {
+    text-shadow: 5px 5px black;
+    margin: 0;
+    padding: 0;
+    font-family: papyrus, fantasy;
+}
+
+nav {
+    padding-top: 0;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+nav div {
+    background-color: lightpink;
+    padding: 0;
+    margin-top: 0;
+    border-bottom: 1px solid white;
+    height: 50px;
+    padding-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    padding-left: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+
+main {
+    
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: white;
+    padding: 0 0 0 2%;
+}
+
+main div img {
+    float: right;
+    margin: 2%;
+    width: 18%;
+    height: 60%;
+}
+
+footer {
+    padding: 5px;
+    background-color: #869dc7;
+    clear: both;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+@media(max-width:1240px) {
+    nav {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        margin: 10px;
+        padding: 0 80px;
+        text-align: center;
+    }
+    nav, main {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    nav div {
+        margin:10px 30px;
+        padding: 0;
+        border-bottom: none;
+        padding-top: 20px;
+    }
+
+    a {
+        padding: 0;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 80px ;
+    }
+}
+
+@media(max-width:700px) {
+
+    h1 {
+        font-size: 70px;
+    }
+
+    header>img {
+        width: 150px;
+    }
+
+    nav {
+        display: grid;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav div {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        margin: 0;
+        padding: 10px;
+        background-color: #b3c7e6;
+        border-bottom: 2px solid white;
+        text-align: left;
+        padding-bottom: 0;
+    }
+    a {
+        font-size: large;
+        font-weight: bold;
+    }
+    main {
+        display: grid;
+        grid-template-rows: auto auto;
+    }
+
+    main #content {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    main div {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    main div img {
+        float: left;
+        width: 30%;
+        height: 90%;
+    }
+}
